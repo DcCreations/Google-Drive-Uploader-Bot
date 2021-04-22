@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+import re
+
+import pyrogram
+from pykeyboard import InlineKeyboard, ReplyKeyboard
+from pyrogram import Client, filters
+from pyrogram.errors import UserNotParticipant
+from pyrogram.types import ForceReply, InlineKeyboardButton,
+                            InlineKeyboardMarkup, InputTextMessageContent,
+                            KeyboardButton
 import json
 from telegram.ext import CommandHandler, MessageHandler, Filters, Updater
 from telegram import ParseMode
@@ -33,7 +42,65 @@ dp = updater.dispatcher                                                         
 
 ######################################################################################
 
+@bot.on_message(filters.private & filters.command(["start"]))
+async def start(client, message):
+    # forcesub
+    update_channel = 'DcCreations'
+    if update_channel:
+        try:
+            user = await client.get_chat_member(update_channel, message.chat.id)
+            if user.status == "kicked":
+                await client.send_message(
+                    chat_id=message.chat.id,
+                    text=f"Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/DcCreationsChat).",
+                    parse_mode="markdown",
+                    disable_web_page_preview=True
+                )
+                return
+        except UserNotParticipant:
+            await client.send_message(
+                chat_id=message.chat.id,
+                text="**Join My Updates channel To access Bot 🔐**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "🔔Join Channel", url=f"https://t.me/DcCreations")
+                        ]
+                    ]
+                ),
+                parse_mode="markdown"
+            )
+            return
+        except Exception:
+            await client.send_message(
+                chat_id=message.chat.id,
+                text=f"Something went Wrong. Contact my [Support Group](https://t.me/DcCreationsChat)",
+                parse_mode="markdown",
+                disable_web_page_preview=True)
+            return
+     # forcesub
+     # forcesub
+    joinButton = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "🔔Join Updates Channel", url="https://t.me/DcCreations")
+            ],
+            [
+                InlineKeyboardButton(
+                    "💬Support Group", url="https://t.me/DcCreationsChat")
+            ],          
+        ]
 
+    )
+    
+# command `Start`
+@run_async
+def start(update, context):
+    context.bot.send_message(chat_id=update.message.chat_id,
+                             text=TEXT.START.format(update.message.from_user.first_name), parse_mode=ParseMode.HTML)
+    
 @run_async
 def help(update, context):
     try:
@@ -41,6 +108,7 @@ def help(update, context):
                                  text=TEXT.HELP, parse_mode=ParseMode.HTML)
     except Exception as e:
         print(e)
+        
 # command ```auth```
 @run_async
 def auth(update, context):
@@ -92,12 +160,6 @@ def token(update, context):
             context.bot.send_message(chat_id=update.message.chat_id,
                                      text=TEXT.AUTH_ERROR)
    
-
-# command `Start`
-@run_async
-def start(update, context):
-    context.bot.send_message(chat_id=update.message.chat_id,
-                             text=TEXT.START.format(update.message.from_user.first_name), parse_mode=ParseMode.HTML)
 
 # command `revoke`
 @run_async
