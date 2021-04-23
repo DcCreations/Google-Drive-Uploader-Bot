@@ -9,7 +9,7 @@ MEGA_EMAIL = "dccretions@gmail.com"
 MEGA_PASSWORD = "dccretions@gmail.com"
 
 
-START = " Hi {}  \nI am Drive Uploader Bot . Please Authorise To use me .By using /auth \n\n For more info /help \n\n Third-Party Website \n Support Added /update \n\n For Bot Updates  \n <a href ='https://t.me/DcCreations'>Join Channel</a>\nPlease Report Bugs  @Royal_Devendra"
+START = " Hi {}  \nI am Drive Uploader Bot . Please Authorise To use me .By using /auth \n\n For more info /help \n\n Third-Party Website \n Support Added /update \n\n For Bot Updates  \n <a href ='https://t.me/SunShineBotsChat'>Join Channel</a>\nPlease Report Bugs  @Royal_Devendra"
 
 HELP = """   <b>AUTHORISE BOT</b> 
        Use  /auth Command Generate
@@ -57,7 +57,7 @@ DROPBOX = True
 MEGA = True
 
 
-UPDATE = """ <b> Update  on  22.04.2021</b>
+UPDATE = """ <b> Update  on  23.04.2021</b>
             ➤ MEGA LINK added
             ➤ Error Handling Improved
 
