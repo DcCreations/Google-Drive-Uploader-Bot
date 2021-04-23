@@ -45,14 +45,14 @@ dp = updater.dispatcher                                                         
 @bot.on_message(filters.private & filters.command(["start"]))
 async def start(client, message):
     # forcesub
-    update_channel = 'DcCreations'
+    update_channel = 'SunShineBots'
     if update_channel:
         try:
             user = await client.get_chat_member(update_channel, message.chat.id)
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.chat.id,
-                    text=f"Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/DcCreationsChat).",
+                    text=f"Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/SunShineBotsChat).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -65,7 +65,7 @@ async def start(client, message):
                     [
                         [
                             InlineKeyboardButton(
-                                "🔔Join Channel", url=f"https://t.me/DcCreations")
+                                "🔔Join Channel", url=f"https://t.me/SunShineBots")
                         ]
                     ]
                 ),
@@ -75,7 +75,7 @@ async def start(client, message):
         except Exception:
             await client.send_message(
                 chat_id=message.chat.id,
-                text=f"Something went Wrong. Contact my [Support Group](https://t.me/DcCreationsChat)",
+                text=f"Something went Wrong. Contact my [Support Group](https://t.me/SunShineBotsChat)",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -85,11 +85,11 @@ async def start(client, message):
         [
             [
                 InlineKeyboardButton(
-                    "🔔Join Updates Channel", url="https://t.me/DcCreations")
+                    "🔔Join Updates Channel", url="https://t.me/SunShineBots")
             ],
             [
                 InlineKeyboardButton(
-                    "💬Support Group", url="https://t.me/DcCreationsChat")
+                    "💬Support Group", url="https://t.me/SunShineBotsChat")
             ],          
         ]
 
