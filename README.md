@@ -7,7 +7,7 @@ A Google Drive Telegram Bot for managing, cloning files, uploading files on Goog
 
 ### Inspired By Sumanjay  Bot :D [Google Drive Uploader](https://telegram.dog/driveuploadbot)
 
-Live Version Of Bot can be found in [Telegram Channel](http://telegram.dog/DcCreations)
+Live Version Of Bot can be found in [Telegram Channel](http://telegram.dog/SunShineBots)
 
 
 
