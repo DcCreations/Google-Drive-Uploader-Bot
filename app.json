@@ -1,0 +1,49 @@
+{
+
+ "name": "GDrive Uploader Bot",
+
+ "description": "A Google Drive Uploader Bot ",
+
+ "logo": "https://telegra.ph/file/c835648c34071cac01ba9.jpg",
+
+ "keywords": [
+
+  "telegram",
+
+  "google",
+  
+  "gdrive uploader",
+  
+  "google drive",
+  
+  "google drive uploader",
+  
+  "telegram bot",
+
+  "modular",
+
+  "productivity"
+
+ ],
+
+ "repository": "https://github.com/DcCreations/Google-Drive-Uploader-Bot/",
+
+ "stack": "heroku-18",
+
+   "env": {
+
+ },
+
+ "addons": [{
+
+  "plan": "heroku-postgresql",
+
+  "options": {
+
+   "version": "12"
+
+  }
+
+ }]
+
+}
