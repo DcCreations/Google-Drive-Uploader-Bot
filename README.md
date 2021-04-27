@@ -10,7 +10,7 @@ A Google Drive Telegram Bot for managing, cloning files, uploading files on Goog
 Live Version Of Bot can be found in [Telegram Channel](http://telegram.dog/SunShineBots)
 
 
-
+[![DEPLOY](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DcCreations/Google-Drive-Uploader-Bot/)
 # Update (22 April 2021)
 
 - Teamdrive Support added 
