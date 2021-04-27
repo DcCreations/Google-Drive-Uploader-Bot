@@ -6,7 +6,7 @@ import pyrogram
 from pykeyboard import InlineKeyboard, ReplyKeyboard
 from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant
-from pyrogram.types import ForceReply, InlineKeyboardButton,
+from pyrogram.types import ForceReply, InlineKeyboardButton
                             InlineKeyboardMarkup, InputTextMessageContent,
                             KeyboardButton
 import json
